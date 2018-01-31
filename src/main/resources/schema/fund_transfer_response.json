@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "FundTransferResponse",
+  "description": "Response for fund transfer",
+  "type": "object",
+  "properties": {
+    "status": {
+      "description": "Status of fund transfer",
+      "type": "string"
+    },
+    "remainingBalance": {
+      "description": "Remaining balance",
+      "type": "string"
+    }
+  },
+
+  "additionalProperties": false,
+  "required": ["status", "remainingBalance"]
+}

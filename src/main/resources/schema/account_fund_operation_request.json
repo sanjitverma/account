@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "AccountFundOperationRequest",
+  "description": "Request for fund deposit/withdrawal",
+  "type": "object",
+  "properties": {
+    "fundActionType": {
+      "description": "Type of operation, withdraw or deposit",
+      "type": "string",
+      "enum": ["DEPOSIT","WITHDRAW"]
+    },
+    "amount": {
+      "description": "Amount to be withdrawn or deposited",
+      "type": "string"
+    }
+  },
+
+  "additionalProperties": false,
+  "required": ["fundActionType", "amount"]
+}

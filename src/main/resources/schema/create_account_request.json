@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "CreateAccountRequest",
+  "description": "Request for account creation",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "description": "First name of customer",
+      "type": "string"
+    },
+    "lastName": {
+      "description": "Last name of customer",
+      "type": "string"
+    },
+    "DOB": {
+      "type": "string",
+      "format": "date"
+    },
+    "AccountType": {
+      "type": "string",
+      "enum": ["DEPOSIT","SAVINGS"]
+    }
+  },
+
+  "additionalProperties": false,
+  "required": ["firstName", "lastName", "DOB", "AccountType"]
+}

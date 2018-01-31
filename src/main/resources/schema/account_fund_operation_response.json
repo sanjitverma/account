@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "AccountFundOperationResponse",
+  "description": "Response for fund deposit/withdrawal",
+  "type": "object",
+  "properties": {
+    "status": {
+      "description": "status of operation, withdraw or deposit",
+      "type": "string"
+    },
+    "remainingBalance": {
+      "description": "Remaining balance",
+      "type": "string"
+    }
+
+  },
+
+  "additionalProperties": false,
+  "required": ["type", "remainingBalance"]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "CreateAccountResponse",
+  "description": "Response for account creation",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Id of the new account created",
+      "type": "string"
+    },
+    "status": {
+      "description": "Status of account created",
+      "type": "string"
+    }
+  },
+
+  "additionalProperties": false,
+  "required": ["id","status"]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "FundTransferRequest",
+  "description": "Request for fund transfer",
+  "type": "object",
+  "properties": {
+    "fromAccount": {
+      "description": "Account to be debited",
+      "type": "string"
+    },
+    "toAccount": {
+      "description": "Account to be credited",
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    }
+  },
+
+  "additionalProperties": false,
+  "required": ["fromAccount", "toAccount", "amount"]
+}

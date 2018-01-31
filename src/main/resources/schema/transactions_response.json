@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "name": "TransactionsResponse",
+  "description": "Response for getting transaction",
+  "type": "object",
+  "properties": {
+    "responseTransaction" : {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "transactionId": {
+            "description": "transaction id",
+            "type": "string"
+          },
+          "transactionType": {
+            "description": "transaction type",
+            "enum": [ "DEBIT", "CREDIT"]
+          },
+          "transactionAmount": {
+            "type": "string"
+          },
+          "transactionDate": {
+            "type": "string"
+          },
+          "accountOperation":{
+            "type": "string",
+            "enum":["ADD_FUND",
+              "WITHDRAW_FUND",
+              "FUND_TRANSFER"]
+          },
+          "cerditAccount":{
+            "type": "string"
+          },
+          "debitAccount":{
+            "type": "string"
+          }
+        },
+        "required": ["transactionId","transactionType","transactionAmount","transactionDate", "accountOperation", "debitAccount","cerditAccount"]
+      }
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+
+  "additionalProperties": false,
+  "required": ["transactionList"]
+}
