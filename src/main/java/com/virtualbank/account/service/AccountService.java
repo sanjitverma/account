@@ -20,7 +20,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by SANJIT on 13/01/18.
@@ -105,7 +104,7 @@ public class AccountService {
         Transaction transaction = new Transaction();
         transaction.setDebitAccount(accountId);
         transaction.setAmount(requestAmount);
-        transaction.setTransaction_date(new Date());
+        transaction.setTransactionDate(new Date());
         transaction.setBalanceOperation(balanceOperation);
         transaction.setTransactionType(transactionType);
         return transaction;

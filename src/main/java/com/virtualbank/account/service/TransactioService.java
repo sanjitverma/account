@@ -56,7 +56,7 @@ public class TransactioService {
                 responseTransaction.setAccountOperation(ResponseTransaction.AccountOperation.valueOf(transaction.getBalanceOperation().toString()));
                 responseTransaction.setCerditAccount(String.valueOf(transaction.getCreditAccount()));
                 responseTransaction.setDebitAccount(String.valueOf(transaction.getDebitAccount()));
-                responseTransaction.setTransactionDate(transaction.getTransaction_date().toString());
+                responseTransaction.setTransactionDate(transaction.getTransactionDate().toString());
                 responseTransaction.setTransactionId(String.valueOf(transaction.getTransaction_id()));
                 responseTransaction.setTransactionAmount(String.valueOf(transaction.getAmount()));
                 responseTransactionList.add(responseTransaction);

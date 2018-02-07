@@ -1,0 +1,7 @@
+stublist:
+ - requesturl: /data/2.5/weather
+   httpmethod: GET
+   responsePath: /res
+ - requesturl: /data/1.5/weather
+   httpmethod: POST
+   responsePath: /res

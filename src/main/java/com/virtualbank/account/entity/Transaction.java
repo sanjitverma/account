@@ -26,7 +26,7 @@ public class Transaction {
 
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
-    private Date transaction_date;
+    private Date transactionDate;
 
     @Enumerated(EnumType.STRING)
     private BalanceOperation balanceOperation;
@@ -62,12 +62,12 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public Date getTransaction_date() {
-        return transaction_date;
+    public Date getTransactionDate() {
+        return transactionDate;
     }
 
-    public void setTransaction_date(Date transaction_date) {
-        this.transaction_date = transaction_date;
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
     }
 
     public BalanceOperation getBalanceOperation() {

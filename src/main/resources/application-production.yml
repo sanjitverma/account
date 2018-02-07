@@ -2,5 +2,5 @@ logging:
   path: /var/logs
   file: accounts.log
   level:
-    root: INFO
+    root: DEBUG
     org.springframework.security: INFO

@@ -1,6 +1,7 @@
 package com.virtualbank.account.controller;
 
 import com.virtualbank.account.*;
+import com.virtualbank.account.external.WeatherApiService;
 import com.virtualbank.account.service.AccountService;
 import com.virtualbank.account.service.TransactioService;
 import org.slf4j.Logger;
@@ -27,6 +28,9 @@ public class BankAccountController {
     @Autowired
     TransactioService transactioService;
 
+    @Autowired
+    WeatherApiService weatherApiService;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(BankAccountController.class);
 
 
@@ -52,9 +56,10 @@ public class BankAccountController {
        return ResponseEntity.ok(fundTransferResponse);
     }
 
-    @GetMapping(value = "/accounts/{id}/transactions")
+    @GetMapping(value = "/accounts/{id}/transactions",produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<TransactionsResponse> getTransactions(@PathVariable(value = "id" ) Long accountId){
         LOGGER.info("Received request to fetch transaction for account {}", accountId );
+        LOGGER.debug("Calling weather api : " + weatherApiService.getWeatherByCity().toString());
         TransactionsResponse transactionsResponse = transactioService.getTransaction(accountId);
         return ResponseEntity.ok(transactionsResponse);
     }
