@@ -4,6 +4,6 @@ workspace:
   base: /account/
 steps:
   - name: build
-    image: maven:3.6.2-jdk-11-slim
+    image: maven:3.3.3-jdk-8-onbuild
     commands:
       - mvn -e -X package -DskipTests=false
