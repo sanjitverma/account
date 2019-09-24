@@ -1,7 +1,7 @@
 kind: pipeline
 name: default
 workspace:
-  base: account/
+  base: /account/
   path: src
 steps:
   - name: build
