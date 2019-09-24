@@ -1,6 +1,8 @@
 kind: pipeline
 name: default
-
+  
+  base: account/
+  path: src
 steps:
   - name: build
     image: maven:3.6.2-jdk-11-slim
