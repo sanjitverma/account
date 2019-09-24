@@ -1,4 +1,11 @@
-pipeline:
-  build:
-  image: openjdk
-  commands: mvn package -DskipTests=false
+kind: pipeline
+name: default
+
+workspace:
+  base: /go
+  path: src/github.com/sanjitverma/account
+steps:
+  - name: build
+    image: openjdk
+    commands:
+      - mvn package -DskipTests=false
