@@ -8,4 +8,4 @@ steps:
   - name: build
     image: openjdk
     commands:
-      - mvn package -DskipTests=false
+      - mvnw package -DskipTests=false
