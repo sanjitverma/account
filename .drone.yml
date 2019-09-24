@@ -6,4 +6,4 @@ steps:
   - name: build
     image: maven:3.6.2-jdk-11-slim
     commands:
-      - mvn package -DskipTests=false
+      - mvn -e package -DskipTests=false
