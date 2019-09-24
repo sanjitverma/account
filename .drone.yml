@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 workspace:
-  base: /go
+  base: /
   path: src/github.com/sanjitverma/account
 steps:
   - name: build
