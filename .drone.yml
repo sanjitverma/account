@@ -2,8 +2,7 @@ kind: pipeline
 name: default
 
 workspace:
-  base: /
-  path: src/github.com/sanjitverma/account
+  path: /src/github.com/sanjitverma/account
 steps:
   - name: build
     image: maven:3.6.2-jdk-11-slim
