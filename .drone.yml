@@ -6,6 +6,6 @@ workspace:
   path: src/github.com/sanjitverma/account
 steps:
   - name: build
-    image: openjdk
+    image: maven:3.3.3-jdk-8-onbuild
     commands:
       - mvnw package -DskipTests=false
