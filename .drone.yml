@@ -6,6 +6,6 @@ workspace:
   path: src/github.com/sanjitverma/account
 steps:
   - name: build
-    image: maven:3.3.3-jdk-8-onbuild
+    image: maven:3.6.2-jdk-11-slim
     commands:
       - mvn package -DskipTests=false
